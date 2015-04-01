@@ -1,6 +1,9 @@
 package com.highness.highnesshotel;
 
+import helper.SessionManager;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,9 +29,34 @@ public class Dashboard extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
+		if (id == R.id.logout) {
+			SessionManager ss = new SessionManager(Dashboard.this);
+			finish();
+			ss.logoutUser();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+	}
+	@Override
+	public void onBackPressed() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Exit");
+		builder.setMessage("Are You Sure?");
+
+		builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+				finish();
+			}
+		});
+
+		builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dialog.dismiss();
+			}
+		});
+		AlertDialog alert = builder.create();
+		alert.show();
 	}
 }
