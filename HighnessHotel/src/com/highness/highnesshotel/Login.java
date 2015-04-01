@@ -128,8 +128,8 @@ private class LoginCheck extends AsyncTask<Void, Void, Void>
 		List<NameValuePair> par= new ArrayList<NameValuePair>();
 		par.add(new BasicNameValuePair("user", user.getText().toString()));
 		par.add(new BasicNameValuePair("pass", pass.getText().toString()));
-		String url="http://192.168.2.33/mobile/login.php";
-		jobj=jsonparser.makeHttpRequest(url, "POST", par);
+		
+		jobj=jsonparser.makeHttpRequest(getResources().getString(R.string.login_url), "POST", par);
 		Log.i("parser",jobj.toString());
 		try {
 			if(jobj.getBoolean("status")){
