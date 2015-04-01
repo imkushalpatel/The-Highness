@@ -22,7 +22,10 @@ public class Splash extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent i=new Intent(getApplicationContext(),Login.class);
+				i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(i);
+				finish();
 			}
 		});
 		
