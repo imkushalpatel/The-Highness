@@ -70,6 +70,7 @@ public class Splash extends Activity {
 		ImageView iv = (ImageView) findViewById(R.id.splash);
 		iv.clearAnimation();
 		iv.startAnimation(anim);
+
 	}
 
 	private class ThreadProgressBar extends Thread {
