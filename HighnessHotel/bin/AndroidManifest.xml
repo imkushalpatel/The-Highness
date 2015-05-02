@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
     </uses-permission>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -40,6 +41,22 @@
         <activity
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard" >
+        </activity>
+        <activity
+            android:name=".RoomBooking"
+            android:label="@string/title_activity_room_booking" >
+        </activity>
+        <activity
+            android:name=".TableBooking"
+            android:label="@string/title_activity_table_booking" >
+        </activity>
+        <activity
+            android:name=".HallBooking"
+            android:label="@string/title_activity_hall_booking" >
+        </activity>
+        <activity
+            android:name=".EventBooking"
+            android:label="@string/title_activity_event_booking" >
         </activity>
     </application>
 

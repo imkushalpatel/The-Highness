@@ -61,6 +61,16 @@ public class Login extends Activity {
 				}
 			}
 		});
+		signup.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intentsignup = new Intent(getApplicationContext(),
+							SignUp.class);
+				startActivity(intentsignup);
+			}
+		});
 	}
 
 	

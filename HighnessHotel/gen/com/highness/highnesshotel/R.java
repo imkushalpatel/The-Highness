@@ -50,36 +50,52 @@ public final class R {
         public static final int wbg=0x7f020015;
     }
     public static final class id {
+        public static final int action_settings=0x7f09001a;
+        public static final int address=0x7f090015;
+        public static final int email=0x7f090011;
         public static final int eventbtn=0x7f090004;
         public static final int fbbtn=0x7f09000e;
+        public static final int fname=0x7f090012;
         public static final int forgotpass=0x7f09000b;
         public static final int gbtn=0x7f09000f;
         public static final int hallbtn=0x7f090005;
         public static final int home=0x7f090000;
-        public static final int lin_lay=0x7f090010;
+        public static final int lin_lay=0x7f090017;
+        public static final int lname=0x7f090010;
         public static final int login=0x7f09000c;
-        public static final int logout=0x7f090013;
+        public static final int logout=0x7f09001b;
         public static final int lower1=0x7f090006;
         public static final int lower2=0x7f090007;
         public static final int newuser=0x7f09000a;
         public static final int or=0x7f09000d;
         public static final int pass=0x7f090009;
-        public static final int progressBar=0x7f090012;
+        public static final int phone=0x7f090014;
+        public static final int progressBar=0x7f090019;
+        public static final int repass=0x7f090013;
         public static final int roombtn=0x7f090003;
+        public static final int signup=0x7f090016;
         public static final int slogon=0x7f090001;
-        public static final int splash=0x7f090011;
+        public static final int splash=0x7f090018;
         public static final int tblbtn=0x7f090002;
         public static final int uname=0x7f090008;
     }
     public static final class layout {
         public static final int activity_dashboard=0x7f030000;
-        public static final int activity_login=0x7f030001;
-        public static final int activity_sign_up=0x7f030002;
-        public static final int activity_splash=0x7f030003;
+        public static final int activity_event_booking=0x7f030001;
+        public static final int activity_hall_booking=0x7f030002;
+        public static final int activity_login=0x7f030003;
+        public static final int activity_room_booking=0x7f030004;
+        public static final int activity_sign_up=0x7f030005;
+        public static final int activity_splash=0x7f030006;
+        public static final int activity_table_booking=0x7f030007;
     }
     public static final class menu {
-        public static final int login=0x7f080000;
-        public static final int logout=0x7f080001;
+        public static final int event_booking=0x7f080000;
+        public static final int hall_booking=0x7f080001;
+        public static final int login=0x7f080002;
+        public static final int logout=0x7f080003;
+        public static final int room_booking=0x7f080004;
+        public static final int table_booking=0x7f080005;
     }
     public static final class string {
         public static final int action_settings=0x7f060002;
@@ -87,8 +103,12 @@ public final class R {
         public static final int hello_world=0x7f060001;
         public static final int login_url=0x7f060006;
         public static final int title_activity_dashboard=0x7f060005;
+        public static final int title_activity_event_booking=0x7f06000a;
+        public static final int title_activity_hall_booking=0x7f060009;
         public static final int title_activity_login=0x7f060003;
+        public static final int title_activity_room_booking=0x7f060007;
         public static final int title_activity_sign_up=0x7f060004;
+        public static final int title_activity_table_booking=0x7f060008;
     }
     public static final class style {
         /** 
