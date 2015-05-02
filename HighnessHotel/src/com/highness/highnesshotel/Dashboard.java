@@ -4,22 +4,30 @@ import helper.SessionManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class Dashboard extends Activity {
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dashboard);
+		
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.dashboard, menu);
+		SessionManager session=new SessionManager(getApplicationContext());
+		if(session.isLoggedIn())
+		getMenuInflater().inflate(R.menu.logout, menu);
+		else getMenuInflater().inflate(R.menu.login, menu);
+		
 		return true;
 	}
 
@@ -29,12 +37,23 @@ public class Dashboard extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
+		SessionManager session=new SessionManager(getApplicationContext());
+		if (session.isLoggedIn()){
 		if (id == R.id.logout) {
-			SessionManager ss = new SessionManager(Dashboard.this);
+			
 			finish();
-			ss.logoutUser();
+			startActivity(getIntent());
+			session.logoutUser();
 			return true;
-		}
+		}}
+		else{
+			if (id == R.id.login) {
+				Intent i=new Intent(Dashboard.this,Login.class);
+			startActivity(i);
+				
+				return true;
+			}}
+		
 		return super.onOptionsItemSelected(item);
 	}
 	@Override
@@ -59,4 +78,13 @@ public class Dashboard extends Activity {
 		AlertDialog alert = builder.create();
 		alert.show();
 	}
+
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		finish();
+		startActivity(getIntent());
+	}
+	
 }

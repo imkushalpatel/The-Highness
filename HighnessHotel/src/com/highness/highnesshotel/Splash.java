@@ -27,7 +27,7 @@ public class Splash extends Activity {
 	
 	private static final long SPLASHTIME = 5000;
 	private ProgressBar progressBar;
-	SessionManager session;
+
 	// flag for Internet connection status
 	Boolean isInternetPresent = false;
 
@@ -41,7 +41,7 @@ public class Splash extends Activity {
 		getActionBar().hide();
 	
 		progressBar = (ProgressBar) findViewById(R.id.progressBar);
-		session = new SessionManager(getApplicationContext());
+		
 		// StartAnimations();
 		// creating connection detector class instance
 		cd = new ConnectionDetector(getApplicationContext());
@@ -113,23 +113,14 @@ public class Splash extends Activity {
 				if (isInternetPresent) {
 					// Internet Connection is Present
 					// make HTTP requests
-					if (session.isLoggedIn()) {
+					
 						Intent intentMain = new Intent(getApplicationContext(),
 								Dashboard.class);
 						intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 						intentMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(intentMain);
 						finish();
-					} else {
-
-						Intent intentMain = new Intent(getApplicationContext(),
-								Login.class);
-						intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-						intentMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						startActivity(intentMain);
-						finish();
-					}
-
+					
 				} else {
 					// Internet connection is not present
 					// Ask user to connect to Internet
@@ -176,26 +167,4 @@ public class Splash extends Activity {
 		alertDialog.show();
 	}
 
-
-		
-	
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.splash, menu);
-		return false;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 }
