@@ -1,8 +1,5 @@
 package com.highness.highnesshotel;
 
-
-
-
 import helper.ConnectionDetector;
 import helper.SessionManager;
 import android.app.Activity;
@@ -24,7 +21,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 public class Splash extends Activity {
-	
+
 	private static final long SPLASHTIME = 5000;
 	private ProgressBar progressBar;
 
@@ -39,9 +36,9 @@ public class Splash extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splash);
 		getActionBar().hide();
-	
+
 		progressBar = (ProgressBar) findViewById(R.id.progressBar);
-		
+
 		// StartAnimations();
 		// creating connection detector class instance
 		cd = new ConnectionDetector(getApplicationContext());
@@ -113,14 +110,14 @@ public class Splash extends Activity {
 				if (isInternetPresent) {
 					// Internet Connection is Present
 					// make HTTP requests
-					
-						Intent intentMain = new Intent(getApplicationContext(),
-								Dashboard.class);
-						intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-						intentMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-						startActivity(intentMain);
-						finish();
-					
+
+					Intent intentMain = new Intent(getApplicationContext(),
+							Dashboard.class);
+					intentMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+					intentMain.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+					startActivity(intentMain);
+					finish();
+
 				} else {
 					// Internet connection is not present
 					// Ask user to connect to Internet

@@ -501,7 +501,7 @@ containing a value of this type.
         public static final int wbg=0x7f020035;
     }
     public static final class id {
-        public static final int action_settings=0x7f0c0032;
+        public static final int action_settings=0x7f0c0035;
         public static final int address=0x7f0c002d;
         public static final int adjust_height=0x7f0c0000;
         public static final int adjust_width=0x7f0c0001;
@@ -511,21 +511,22 @@ containing a value of this type.
         public static final int buy_with_google=0x7f0c0012;
         public static final int classic=0x7f0c0014;
         public static final int donate_with_google=0x7f0c0013;
-        public static final int email=0x7f0c0029;
+        public static final int email=0x7f0c002a;
         public static final int eventbtn=0x7f0c001c;
-        public static final int fname=0x7f0c002a;
+        public static final int fname=0x7f0c0028;
         public static final int forgotpass=0x7f0c0024;
         public static final int gbtn=0x7f0c0027;
+        public static final int gender=0x7f0c002f;
         public static final int grayscale=0x7f0c0015;
         public static final int hallbtn=0x7f0c001d;
         public static final int holo_dark=0x7f0c0007;
         public static final int holo_light=0x7f0c0008;
         public static final int home=0x7f0c0018;
         public static final int hybrid=0x7f0c0003;
-        public static final int lin_lay=0x7f0c002f;
-        public static final int lname=0x7f0c0028;
+        public static final int lin_lay=0x7f0c0032;
+        public static final int lname=0x7f0c0029;
         public static final int login=0x7f0c0025;
-        public static final int logout=0x7f0c0033;
+        public static final int logout=0x7f0c0036;
         public static final int lower1=0x7f0c001e;
         public static final int lower2=0x7f0c001f;
         public static final int match_parent=0x7f0c000e;
@@ -537,7 +538,9 @@ containing a value of this type.
         public static final int pass=0x7f0c0022;
         public static final int phone=0x7f0c002c;
         public static final int production=0x7f0c0009;
-        public static final int progressBar=0x7f0c0031;
+        public static final int progressBar=0x7f0c0034;
+        public static final int radiofemale=0x7f0c0031;
+        public static final int radiomale=0x7f0c0030;
         public static final int repass=0x7f0c002b;
         public static final int roombtn=0x7f0c001b;
         public static final int sandbox=0x7f0c000a;
@@ -546,7 +549,7 @@ containing a value of this type.
         public static final int signup=0x7f0c002e;
         public static final int slide=0x7f0c0017;
         public static final int slogon=0x7f0c0019;
-        public static final int splash=0x7f0c0030;
+        public static final int splash=0x7f0c0033;
         public static final int strict_sandbox=0x7f0c000b;
         public static final int tblbtn=0x7f0c001a;
         public static final int terrain=0x7f0c0006;
@@ -694,16 +697,18 @@ containing a value of this type.
         public static final int create_calendar_title=0x7f070004;
         public static final int decline=0x7f070003;
         public static final int hello_world=0x7f070027;
-        public static final int login_url=0x7f07002c;
+        public static final int login_url=0x7f070030;
+        public static final int signup_email_url=0x7f070031;
+        public static final int signup_url=0x7f070032;
         public static final int store_picture_message=0x7f070001;
         public static final int store_picture_title=0x7f070000;
         public static final int title_activity_dashboard=0x7f07002b;
-        public static final int title_activity_event_booking=0x7f070030;
-        public static final int title_activity_hall_booking=0x7f07002f;
+        public static final int title_activity_event_booking=0x7f07002f;
+        public static final int title_activity_hall_booking=0x7f07002e;
         public static final int title_activity_login=0x7f070029;
-        public static final int title_activity_room_booking=0x7f07002d;
+        public static final int title_activity_room_booking=0x7f07002c;
         public static final int title_activity_sign_up=0x7f07002a;
-        public static final int title_activity_table_booking=0x7f07002e;
+        public static final int title_activity_table_booking=0x7f07002d;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */

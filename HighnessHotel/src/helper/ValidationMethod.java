@@ -10,7 +10,8 @@ import android.widget.EditText;
 public class ValidationMethod {
 
 	// method for email validation
-	public static boolean checkEmail(String email) {
+	public static boolean checkEmail(EditText etText) {
+		String email = etText.getText().toString().trim();
 		Pattern email_id = Pattern.compile(".+@.+\\.[a-z]+");
 		return email_id.matcher(email).matches();
 	}
@@ -18,7 +19,7 @@ public class ValidationMethod {
 	// method to check edittext is empty or not
 
 	public static boolean checkEmpty(EditText etText) {
-		if (etText.getText().toString().trim().trim().length() > 0)
+		if (etText.getText().toString().isEmpty())
 			return true;
 		else
 			return false;
