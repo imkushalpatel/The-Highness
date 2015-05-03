@@ -79,26 +79,15 @@
         android:layout_margin="20dp"
         android:text="-- OR --" 
         android:textSize="10dp"/>
-    
-     <ImageView
-        android:id="@+id/fbbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/or"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        android:src="@drawable/fb"
-        
-         />
- <ImageView
-        android:id="@+id/gbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/fbbtn"
-        android:clickable="true"
-        android:src="@drawable/g"
-        
-         />
+
+     <com.google.android.gms.common.SignInButton
+         android:id="@+id/gbtn"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignLeft="@+id/lower1"
+         android:layout_alignRight="@+id/lower1"
+         android:layout_below="@id/or" >
+
+     </com.google.android.gms.common.SignInButton>
+
 </RelativeLayout>

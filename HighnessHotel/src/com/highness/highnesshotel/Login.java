@@ -12,6 +12,10 @@ import org.json.JSONObject;
 
 
 
+
+
+import com.google.android.gms.common.SignInButton;
+
 import helper.JSONParser;
 import helper.SessionManager;
 import helper.ValidationMethod;
@@ -21,6 +25,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.hardware.Camera.Size;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +41,7 @@ public class Login extends Activity {
 	Button btn;
 	EditText user,pass;
 	TextView signup,forgotpass;
+	SignInButton gbtn;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +52,8 @@ public class Login extends Activity {
 		pass=(EditText)findViewById(R.id.pass);
 		signup=(TextView)findViewById(R.id.newuser);
 		forgotpass=(TextView)findViewById(R.id.forgotpass);
+		gbtn=(SignInButton)findViewById(R.id.gbtn);
+		gbtn.setSize(SignInButton.SIZE_WIDE);
 		
 		btn.setOnClickListener(new View.OnClickListener() {
 			
