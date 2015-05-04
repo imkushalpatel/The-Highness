@@ -1,16 +1,100 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/wbg"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.highness.highnesshotel.TableBooking" >
+    tools:context="com.highness.TableBooking" >
+
+    <EditText
+        android:id="@+id/tblpersonnum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Number of persons"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/tbldate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tblpersonnum"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="date" />
 
     <TextView
+        android:id="@+id/tbltime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_below="@id/tbldate"
+        android:layout_margin="10dp"
+        android:text="Time:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tbldate"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Lunch" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinner" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tblmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/radioGroup2"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:onClick="goToSo"
+        android:text="Check Menu"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/tblbuk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tblmenu"
+        android:layout_centerHorizontal="true"
+        android:text="Book" />
+
+    <TextView
+        android:id="@+id/lower1"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/lower2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#01dfa5" />
 
 </RelativeLayout>

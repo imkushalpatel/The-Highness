@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 
 public class Dashboard extends Activity {
@@ -21,6 +22,45 @@ public class Dashboard extends Activity {
 		btnevent = (ImageView) findViewById(R.id.eventbtn);
 		btnroom = (ImageView) findViewById(R.id.roombtn);
 		btnhall = (ImageView) findViewById(R.id.hallbtn);
+		btntbl.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent tablebookintent =new Intent(getApplicationContext(),TableBooking.class);
+				startActivity(tablebookintent);
+
+			}
+		});
+		btnevent.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent eventbookintent =new Intent(getApplicationContext(),EventBooking.class);
+				startActivity(eventbookintent);
+			}
+		});
+		btnroom.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent roombookintent =new Intent(getApplicationContext(),RoomBooking.class);
+				startActivity(roombookintent);
+
+			}
+		});
+		btnhall.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent hallbookintent =new Intent(getApplicationContext(),HallBooking.class);
+				startActivity(hallbookintent);
+
+			}
+		});
 
 	}
 
@@ -54,7 +94,7 @@ public class Dashboard extends Activity {
 			}
 		} else {
 			if (id == R.id.login) {
-				Intent i = new Intent(Dashboard.this, Login.class);
+				Intent i = new Intent(getApplicationContext(), Login.class);
 				startActivity(i);
 
 				return true;

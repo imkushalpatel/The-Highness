@@ -1,17 +1,84 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/wbg"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.highness.highnesshotel.HallBooking" >
+    tools:context="com.highness.HallBooking" >
+
+    <Spinner
+        android:id="@+id/htype"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <EditText
+        android:id="@+id/hpersonnum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/htype"
+        android:hint="Number of guest"
+        android:inputType="number" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/hdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hpersonnum"
+        android:hint="Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/htime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hdate"
+        android:hint="Time"
+        android:inputType="time" >
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/hfood"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/htime"
+        android:text="Arrange food by Highness" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/halldetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/hfood"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:onClick="goToSo"
+        android:text="View Images"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/hallbuk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/halldetail"
+        android:text="Book" />
+
+    <TextView
+        android:id="@+id/lower1"
+        android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/lower2"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="#01dfa5" />
 
 </RelativeLayout>

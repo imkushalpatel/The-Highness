@@ -96,6 +96,14 @@
         android:layout_below="@+id/address"
         android:orientation="horizontal" >
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="Gender:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
         <RadioButton
             android:id="@+id/radiomale"
             android:layout_width="wrap_content"
