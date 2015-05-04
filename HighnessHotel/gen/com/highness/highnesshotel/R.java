@@ -501,11 +501,12 @@ containing a value of this type.
         public static final int wbg=0x7f020035;
     }
     public static final class id {
-        public static final int action_settings=0x7f0c0054;
         public static final int address=0x7f0c0043;
         public static final int adjust_height=0x7f0c0000;
         public static final int adjust_width=0x7f0c0001;
         public static final int book_now=0x7f0c0010;
+        public static final int btnno=0x7f0c0055;
+        public static final int btnyes=0x7f0c0054;
         public static final int buyButton=0x7f0c000c;
         public static final int buy_now=0x7f0c0011;
         public static final int buy_with_google=0x7f0c0012;
@@ -513,6 +514,9 @@ containing a value of this type.
         public static final int chckout=0x7f0c003c;
         public static final int child=0x7f0c003a;
         public static final int classic=0x7f0c0014;
+        public static final int diadate=0x7f0c0052;
+        public static final int dianoofperson=0x7f0c0051;
+        public static final int diatime=0x7f0c0053;
         public static final int donate_with_google=0x7f0c0013;
         public static final int edate=0x7f0c0022;
         public static final int edecor=0x7f0c0024;
@@ -544,7 +548,7 @@ containing a value of this type.
         public static final int lin_lay=0x7f0c0049;
         public static final int lname=0x7f0c003f;
         public static final int login=0x7f0c0033;
-        public static final int logout=0x7f0c0055;
+        public static final int logout=0x7f0c0056;
         public static final int lower1=0x7f0c001e;
         public static final int lower2=0x7f0c001f;
         public static final int match_parent=0x7f0c000e;
@@ -557,9 +561,6 @@ containing a value of this type.
         public static final int phone=0x7f0c0042;
         public static final int production=0x7f0c0009;
         public static final int progressBar=0x7f0c004b;
-        public static final int radio0=0x7f0c0050;
-        public static final int radio1=0x7f0c0051;
-        public static final int radioGroup2=0x7f0c004f;
         public static final int radiofemale=0x7f0c0048;
         public static final int radiomale=0x7f0c0047;
         public static final int repass=0x7f0c0041;
@@ -577,9 +578,9 @@ containing a value of this type.
         public static final int splash=0x7f0c004a;
         public static final int strict_sandbox=0x7f0c000b;
         public static final int tblbtn=0x7f0c001a;
-        public static final int tblbuk=0x7f0c0053;
+        public static final int tblbuk=0x7f0c004f;
         public static final int tbldate=0x7f0c004d;
-        public static final int tblmenu=0x7f0c0052;
+        public static final int tblmenu=0x7f0c0050;
         public static final int tblpersonnum=0x7f0c004c;
         public static final int tbltime=0x7f0c004e;
         public static final int terrain=0x7f0c0006;
@@ -600,14 +601,11 @@ containing a value of this type.
         public static final int activity_sign_up=0x7f030005;
         public static final int activity_splash=0x7f030006;
         public static final int activity_table_booking=0x7f030007;
+        public static final int dialog_table_booking=0x7f030008;
     }
     public static final class menu {
-        public static final int event_booking=0x7f0b0000;
-        public static final int hall_booking=0x7f0b0001;
-        public static final int login=0x7f0b0002;
-        public static final int logout=0x7f0b0003;
-        public static final int room_booking=0x7f0b0004;
-        public static final int table_booking=0x7f0b0005;
+        public static final int login=0x7f0b0000;
+        public static final int logout=0x7f0b0001;
     }
     public static final class raw {
         public static final int gtm_analytics=0x7f050000;
