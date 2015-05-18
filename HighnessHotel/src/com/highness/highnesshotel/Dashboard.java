@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -92,6 +93,29 @@ public class Dashboard extends Activity {
 				session.logoutUser();
 				return true;
 			}
+			if (id == R.id.cntcus) {
+				Intent i = new Intent(getApplicationContext(), ContactUs.class);
+				startActivity(i);
+
+				return true;
+			}
+			if (id == R.id.shareapp) {
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT, "http://www.google.com");
+				sendIntent.setType("text/plain");
+				startActivity(Intent.createChooser(sendIntent,"Share App To..."));
+				return true;
+			}
+			if (id == R.id.rateapp) {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+			    intent.setData(Uri.parse("market://details?id=com.google.android.googlequicksearchbox"));
+			    //intent.setData(Uri.parse("https://play.google.com/store/apps/details?[Id]"));
+			    startActivity(intent);  
+			    return true;
+			    }
+			
+
 		} else {
 			if (id == R.id.login) {
 				Intent i = new Intent(getApplicationContext(), Login.class);
@@ -99,6 +123,28 @@ public class Dashboard extends Activity {
 
 				return true;
 			}
+			if (id == R.id.cntcus) {
+				Intent i = new Intent(getApplicationContext(), ContactUs.class);
+				startActivity(i);
+
+				return true;
+			}
+			if (id == R.id.shareapp) {
+				Intent sendIntent = new Intent();
+				sendIntent.setAction(Intent.ACTION_SEND);
+				sendIntent.putExtra(Intent.EXTRA_TEXT, "http://www.google.com");
+				sendIntent.setType("text/plain");
+				startActivity(Intent.createChooser(sendIntent,"Share App To..."));
+				return true;
+			}
+			if (id == R.id.rateapp) {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+			    intent.setData(Uri.parse("market://details?id=com.google.android.googlequicksearchbox"));
+			   //intent.setData(Uri.parse("https://play.google.com/store/apps/details?[Id]"));
+			     startActivity(intent);
+			       return true;
+			    }
+			
 		}
 
 		return super.onOptionsItemSelected(item);

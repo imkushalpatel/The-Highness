@@ -12,8 +12,7 @@
     <Spinner
         android:id="@+id/rtype"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-         />
+        android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/rnumber"
@@ -21,66 +20,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/rtype"
         android:hint="Number of rooms"
-        android:inputType="number" 
-        />
-
-    <EditText
-        android:id="@+id/elder"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rnumber"
-        android:layout_toLeftOf="@+id/rumdetail"
-        android:hint="No of elders"
         android:inputType="number" />
 
-    <EditText
-        android:id="@+id/child"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/rnumber"
-        android:layout_toRightOf="@+id/elder"
-        android:hint="No of child"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/chckin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/elder"
-        android:ems="10"
-        android:hint="Chech-in Date"
-        android:inputType="date" >
-    </EditText>
-
-    <EditText
-        android:id="@+id/chckout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/chckin"
-        android:ems="10"
-        android:hint="Chech-out Date"
-        android:inputType="date" />
-
-    <TextView
-        android:id="@+id/rumdetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/chckout"
-        android:layout_margin="10dp"
-        android:clickable="true"
-        android:onClick="goToSo"
-        android:text="View room details"
-        android:textSize="15dp" />
-
-    <Button
-        android:id="@+id/rumbuk"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rumdetail"
-        android:layout_centerHorizontal="true"
-        android:text="Book" />
+   
 
     <TextView
         android:id="@+id/lower1"
@@ -96,5 +38,78 @@
         android:layout_height="2dp"
         android:layout_alignParentBottom="true"
         android:background="#01dfa5" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rnumber"
+        android:layout_alignRight="@+id/rnumber"
+        android:layout_below="@id/rnumber" >
+
+        <EditText
+            android:id="@+id/elder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="No of elders"
+            android:inputType="number" >
+
+           
+        </EditText>
+
+        <EditText
+            android:id="@+id/child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="No of child"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/chckin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chckout"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:ems="10"
+        android:hint="Check-in Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/chckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_below="@+id/chckin"
+        android:ems="10"
+        android:hint="Check-out Date"
+        android:inputType="date" >
+
+        
+    </EditText>
+     <TextView
+        android:id="@+id/rumdetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/chckout"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:onClick="goToSo"
+        android:text="View room details"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/rumbuk"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/chckout"
+        android:layout_alignRight="@+id/chckout"
+        android:layout_below="@id/rumdetail"
+        android:text="Book" />
 
 </RelativeLayout>

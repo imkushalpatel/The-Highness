@@ -4,6 +4,22 @@
 
     <item android:id="@+id/login" android:title="Login"
         android:orderInCategory="100"
-        android:showAsAction="never"/>
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/shareapp"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Share the app"/>
+    <item
+        android:id="@+id/rateapp"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Rate the app"/>
+ 
+    <item
+        android:id="@+id/cntcus"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Contact us"/>
 
 </menu>
