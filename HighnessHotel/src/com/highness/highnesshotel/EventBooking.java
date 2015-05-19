@@ -100,8 +100,8 @@ SessionManager sessionmanager;
 	                            @Override
 	                            public void onDateSet(DatePicker view, int year,
 	                                                  int monthOfYear, int dayOfMonth) {
-	                                etdate.setText(year + "-"
-	                                        + (monthOfYear + 1) + "-" + dayOfMonth);
+	                                etdate.setText(dayOfMonth + "-"
+											+ (monthOfYear + 1) + "-" + year);
 
 	                            }
 	                        }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
